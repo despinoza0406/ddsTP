@@ -62,8 +62,8 @@ public class Cliente {
 		return dispositivos.stream().mapToInt(disp -> disp.getConsumo()).sum();
 	}
 	
-	void setCategoria() {
-
+	public double calcularFactura() {
+		return categoria.getFacturaMensual(this.consumoTotal());
 	}
 	
 	
